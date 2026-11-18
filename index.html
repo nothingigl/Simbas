@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simba's School — современная школа английского языка в Туркестане и Кентау</title>
+  <meta name="description" content="Говорите свободно, сдавайте IELTS на 6.0+ и ЕНТ на 50 баллов. Более 1370 высоких оценок от учеников со средним рейтингом 5.0 в 2ГИС! 4 филиала в Туркестане и Кентау." />
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            simba: {
+              amber: '#F59E0B',
+              orange: '#EA580C',
+              light: '#FEF3C7',
+              navy: '#0F172A',
+              blue: '#1E3A8A',
+              slate: '#F8FAFC',
+              whatsapp: '#25D366',
+              twogis: '#19AA1E'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04)',
+            'amber-glow': '0 12px 28px -6px rgba(245, 158, 11, 0.45)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Neutral geometric architectural pattern (Islamic-ethics friendly abstract geometry) */
+    .bg-geometric {
+      background-image: radial-gradient(rgba(245, 158, 11, 0.14) 1.5px, transparent 1.5px),
+                        radial-gradient(rgba(30, 58, 138, 0.08) 1.5px, #F8FAFC 1.5px);
+      background-size: 36px 36px;
+      background-position: 0 0, 18px 18px;
+    }
+    .bg-navy-geometric {
+      background-color: #0F172A;
+      background-image:
+        linear-gradient(30deg, rgba(245, 158, 11, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(245, 158, 11, 0.05) 87.5%, rgba(245, 158, 11, 0.05)),
+        linear-gradient(150deg, rgba(245, 158, 11, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(245, 158, 11, 0.05) 87.5%, rgba(245, 158, 11, 0.05)),
+        linear-gradient(60deg, rgba(30, 58, 138, 0.18) 25%, transparent 25.5%, transparent 75%, rgba(30, 58, 138, 0.18) 75%, rgba(30, 58, 138, 0.18));
+      background-size: 48px 84px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- 1. ШАПКА (HEADER) -->
+  <header id="header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-3.5">
+        <!-- Логотип -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-crown text-lg"></i>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-simba-navy block leading-none">
+              Simba's <span class="text-amber-500">School</span>
+            </span>
+            <span class="text-[11px] font-medium text-slate-500 tracking-wider uppercase block mt-0.5">
+              English Language School
+            </span>
+          </div>
+        </a>
+
+        <!-- Десктопная навигация -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+          <a href="#about" class="hover:text-amber-600 transition-colors py-1">О школе</a>
+          <a href="#programs" class="hover:text-amber-600 transition-colors py-1">Направления</a>
+          <a href="#branches" class="hover:text-amber-600 transition-colors py-1 flex items-center gap-1.5">
+            <span>Филиалы</span>
+            <span class="px-1.5 py-0.5 text-[10px] font-bold bg-amber-100 text-amber-800 rounded-md">4</span>
+          </a>
+          <a href="#contacts" class="hover:text-amber-600 transition-colors py-1">Контакты</a>
+        </nav>
+
+        <!-- Кнопка "Записаться" + Мобильное меню -->
+        <div class="flex items-center gap-3">
+          <a href="#branches"
+             class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-md hover:shadow-amber-glow hover:-translate-y-0.5 transition-all duration-300">
+            <span>Записаться</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+
+          <!-- Кнопка бургер-меню для смартфонов -->
+          <button id="mobile-menu-btn"
+                  type="button"
+                  aria-label="Открыть меню"
+                  aria-expanded="false"
+                  class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200 text-simba-navy hover:bg-slate-100 transition-colors">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Выпадающее мобильное меню -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 shadow-xl">
+      <div class="flex flex-col space-y-2 text-base font-semibold text-slate-800">
+        <a href="#about" class="mobile-link px-3 py-2.5 rounded-xl hover:bg-amber-50 hover:text-amber-600 transition-colors">
+          <i class="fa-solid fa-award w-6 text-amber-500"></i> О школе
+        </a>
+        <a href="#programs" class="mobile-link px-3 py-2.5 rounded-xl hover:bg-amber-50 hover:text-amber-600 transition-colors">
+          <i class="fa-solid fa-book-open w-6 text-amber-500"></i> Направления
+        </a>
+        <a href="#branches" class="mobile-link px-3 py-2.5 rounded-xl hover:bg-amber-50 hover:text-amber-600 transition-colors">
+          <i class="fa-solid fa-location-dot w-6 text-amber-500"></i> Филиалы (Туркестан и Кентау)
+        </a>
+        <a href="#contacts" class="mobile-link px-3 py-2.5 rounded-xl hover:bg-amber-50 hover:text-amber-600 transition-colors">
+          <i class="fa-solid fa-phone w-6 text-amber-500"></i> Контакты
+        </a>
+        <div class="pt-2">
+          <a href="#branches"
+             class="mobile-link w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold py-3 px-4 rounded-xl shadow-md">
+            <span>Записаться на обучение</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. ГЛАВНЫЙ ЭКРАН (HERO SECTION) -->
+    <section class="relative overflow-hidden bg-geometric pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-slate-200/70">
+      <!-- Декоративные геометрические круги света -->
+      <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-blue-900/10 blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Левая колонка: Текст и CTA -->
+          <div class="lg:col-span-7 text-left">
+            <!-- Бейдж доверия 2ГИС -->
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-amber-200 shadow-sm mb-6">
+              <span class="flex items-center gap-1 text-amber-500 font-bold text-xs sm:text-sm">
+                <i class="fa-solid fa-star"></i> 5.0 в 2ГИС
+              </span>
+              <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700">
+                1370+ реальных отзывов учеников
+              </span>
+            </div>
+
+            <!-- Заголовок -->
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-simba-navy leading-tight tracking-tight mb-5">
+              Simba's School — современная школа английского языка в
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">Туркестане</span>
+            </h1>
+
+            <!-- Подзаголовок -->
+            <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
+              Говорите свободно, сдавайте <strong class="text-simba-navy font-semibold">IELTS на 6.0+</strong> и <strong class="text-simba-navy font-semibold">ЕНТ на 50 баллов</strong>. Более 1370 высоких оценок от учеников со средним рейтингом <strong class="text-amber-600 font-bold">5.0 в 2ГИС!</strong>
+            </p>
+
+            <!-- 2 кнопки (Mobile-first: во всю ширину на смартфонах, в ряд на планшетах и ПК) -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 mb-9">
+              <a href="#branches"
+                 class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold text-base px-7 py-4 rounded-2xl shadow-lg hover:shadow-amber-glow hover:-translate-y-0.5 transition-all duration-300">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Выбрать филиал</span>
+              </a>
+
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20обучению%20в%20Simba's%20School"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2.5 bg-simba-navy hover:bg-simba-blue text-white font-bold text-base px-7 py-4 rounded-2xl shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                <i class="fa-brands fa-whatsapp text-xl text-[#25D366]"></i>
+                <span>Бесплатная консультация</span>
+              </a>
+            </div>
+
+            <!-- Быстрые факты -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-slate-200/80">
+              <div>
+                <div class="font-display font-extrabold text-2xl sm:text-3xl text-simba-navy">4</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium">удобных филиала в Туркестане и Кентау</div>
+              </div>
+              <div>
+                <div class="font-display font-extrabold text-2xl sm:text-3xl text-amber-500">6.0+</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium">результат IELTS наших студентов с 13 лет</div>
+              </div>
+              <div>
+                <div class="font-display font-extrabold text-2xl sm:text-3xl text-simba-blue">50/50</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium">целевой балл подготовки к ЕНТ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правая колонка: Образовательная графическая композиция (книги, глобус, сертификаты) -->
+          <div class="lg:col-span-5">
+            <div class="relative bg-gradient-to-br from-simba-navy via-slate-900 to-simba-blue rounded-3xl p-6 sm:p-8 text-white shadow-2xl border border-slate-800 overflow-hidden">
+              <!-- Геометрический орнамент фона карточки -->
+              <svg class="absolute top-0 right-0 w-64 h-64 text-amber-500/10 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="4" stroke-dasharray="12 12"/>
+                <circle cx="100" cy="100" r="65" stroke="currentColor" stroke-width="3"/>
+                <rect x="55" y="55" width="90" height="90" stroke="currentColor" stroke-width="3" transform="rotate(45 100 100)"/>
+              </svg>
+
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                      <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-wider text-amber-400 font-bold">Академический стандарт</div>
+                      <div class="font-display font-bold text-lg">Simba's Education</div>
+                    </div>
+                  </div>
+                  <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold">
+                    Набор открыт
+                  </span>
+                </div>
+
+                <!-- Иллюстративные карточки достижений -->
+                <div class="space-y-3.5 mb-6">
+                  <div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/15 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500 text-simba-navy flex items-center justify-center shrink-0 font-display font-black text-base shadow">
+                      IELTS
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="font-bold text-sm sm:text-base">Подготовка к IELTS 6.0 — 7.5+</div>
+                      <div class="text-xs text-slate-300">Академический английский и практика всех 4 секций</div>
+                    </div>
+                    <i class="fa-solid fa-certificate text-amber-400 text-xl"></i>
+                  </div>
+
+                  <div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/15 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center shrink-0 font-display font-black text-base shadow">
+                      ЕНТ
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="font-bold text-sm sm:text-base">Грант и 50 баллов на ЕНТ</div>
+                      <div class="text-xs text-slate-300">Системный разбор тестов и ежемесячный контроль</div>
+                    </div>
+                    <i class="fa-solid fa-book-bookmark text-blue-300 text-xl"></i>
+                  </div>
+
+                  <div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/15 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 font-display font-black text-lg shadow">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="font-bold text-sm sm:text-base">Speaking & General English</div>
+                      <div class="text-xs text-slate-300">Преодоление языкового барьера с первых занятий</div>
+                    </div>
+                    <i class="fa-solid fa-comments text-emerald-300 text-xl"></i>
+                  </div>
+                </div>
+
+                <!-- Плашка рейтинга 2ГИС -->
+                <div class="bg-slate-950/60 border border-amber-500/30 rounded-2xl p-4 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#19AA1E] flex items-center justify-center text-white font-bold text-sm shrink-0">
+                      2ГИС
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-300">Народный рейтинг школы</div>
+                      <div class="font-bold text-sm text-white flex items-center gap-1.5">
+                        <span class="text-amber-400">★★★★★</span>
+                        <span>5.0 (1370+ оценок)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#branches" class="text-xs font-bold text-amber-400 hover:text-amber-300 underline underline-offset-4 shrink-0">
+                    Все филиалы →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. НАПРАВЛЕНИЯ ОБУЧЕНИЯ (СЕТКА КАРТОЧЕК) -->
+    <section id="programs" class="py-16 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Заголовок секции -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider mb-3">
+            Программы обучения
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-simba-navy tracking-tight mb-4">
+            Направления обучения в Simba's School
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg">
+            Подбираем программу под вашу точную цель — от первых шагов в английском до поступления в зарубежные и топовые казахстанские вузы.
+          </p>
+        </div>
+
+        <!-- Сетка из 5 карточек направлений -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Карточка 1: General English -->
+          <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 hover:border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-blue-900 text-amber-400 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-900 font-bold text-xs">
+                  Beginner — Advanced
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-simba-navy mb-2.5">
+                General English
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                Комплексный курс общего английского для всех уровней от <strong>Beginner до Advanced</strong>. Развиваем чтение, письмо, восприятие на слух и живую речь.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-500">Все уровни подготовки</span>
+              <a href="#branches" class="text-sm font-bold text-amber-600 hover:text-orange-600 inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Записаться</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Карточка 2: IELTS Preparation -->
+          <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 hover:border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 font-bold text-xs">
+                  С 13 лет • 6.0+
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-simba-navy mb-2.5">
+                IELTS Preparation
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                Интенсивная подготовка к международному экзамену на <strong>результат 6.0+ с 13 лет</strong>. Практика пробных Mock Exams и разбор стратегий Listening, Reading, Writing, Speaking.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-500">Международный сертификат</span>
+              <a href="#branches" class="text-sm font-bold text-amber-600 hover:text-orange-600 inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Записаться</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Карточка 3: Подготовка к ЕНТ -->
+          <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 hover:border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-blue-900 text-amber-400 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs">
+                  Цель — 50 баллов
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-simba-navy mb-2.5">
+                Подготовка к ЕНТ
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                Целенаправленная подготовка старшеклассников к ЕНТ по английскому языку (<strong>цель — 50 баллов</strong>). Глубокая проработка грамматики, лексики и контекстных заданий.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-500">Поступление на грант</span>
+              <a href="#branches" class="text-sm font-bold text-amber-600 hover:text-orange-600 inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Записаться</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Карточка 4: Simba KIDS -->
+          <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 hover:border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa-solid fa-shapes"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 font-bold text-xs">
+                  В группах и индивидуально
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-simba-navy mb-2.5">
+                Simba KIDS
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                Увлекательные <strong>групповые и индивидуальные занятия для детей</strong>. Закладываем крепкую базу английского через интерактивные задания, чтение и словарный запас.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/70 flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-500">Для школьников и детей</span>
+              <a href="#branches" class="text-sm font-bold text-amber-600 hover:text-orange-600 inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Записаться</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Карточка 5: Speaking Club -->
+          <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 hover:border-amber-400 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-blue-900 text-amber-400 flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-900 font-bold text-xs">
+                  Живое общение без барьеров
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-simba-navy mb-2.5">
+                Speaking Club
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-5">
+                Интенсивная <strong>разговорная практика и преодоление языкового барьера</strong>. Дискуссии на актуальные темы, пополнение активного словарного запаса, постановка правильного произношения и уверенность в живом диалоге.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/70 flex flex-wrap items-center justify-between gap-3">
+              <span class="text-xs font-semibold text-slate-500">Практика разговорного английского</span>
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20обучению%20в%20Simba's%20School"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="text-sm font-bold text-amber-600 hover:text-orange-600 inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Узнать расписание в WhatsApp</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ГЛАВНЫЙ БЛОК — "НАШИ ФИЛИАЛЫ" (4 КАРТОЧКИ В СЕТКЕ 2x2 НА ПК, ПО 1 В РЯД НА ТЕЛЕФОНЕ) -->
+    <section id="branches" class="py-16 sm:py-24 bg-slate-100/90 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Заголовок и фильтр городов -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-6">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/15 text-amber-700 font-bold text-xs uppercase tracking-wider mb-3">
+              <i class="fa-solid fa-map-location-dot"></i> Выберите ближайший филиал
+            </span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-simba-navy tracking-tight">
+              Наши филиалы в Туркестане и Кентау
+            </h2>
+            <p class="text-slate-600 text-base sm:text-lg mt-2 max-w-2xl">
+              Постройте маршрут в 2ГИС или напишите напрямую на WhatsApp нужного филиала в один клик.
+            </p>
+          </div>
+
+          <!-- Быстрый фильтр по городу -->
+          <div class="inline-flex p-1.5 rounded-2xl bg-white border border-slate-200 shadow-sm self-start">
+            <button type="button" data-city-filter="all" class="city-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-simba-navy text-white transition-all">
+              Все (4)
+            </button>
+            <button type="button" data-city-filter="turkestan" class="city-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-simba-navy transition-all">
+              Туркестан (3)
+            </button>
+            <button type="button" data-city-filter="kentau" class="city-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-simba-navy transition-all">
+              Кентау (1)
+            </button>
+          </div>
+        </div>
+
+        <!-- Сетка 2x2 на ПК (md:grid-cols-2), 1 в ряд на телефоне (grid-cols-1) -->
+        <div id="branches-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+          <!-- ФИЛИАЛ 1: Филиал МКТУ (Саттарханова) -->
+          <article data-city="turkestan" class="branch-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl border border-slate-200/90 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-simba-blue bg-blue-50 px-3 py-1 rounded-lg border border-blue-100">
+                  <i class="fa-solid fa-building-columns text-amber-500"></i> г. Туркестан
+                </span>
+                <!-- Бейдж с рейтингом 2ГИС -->
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-bold text-xs sm:text-sm shadow-sm">
+                  <span class="text-amber-500">★</span> 5.0 (490+ оценок) <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded">2ГИС</span>
+                </span>
+              </div>
+
+              <h3 class="font-display font-extrabold text-xl sm:text-2xl text-simba-navy mb-3">
+                Филиал МКТУ (Саттарханова)
+              </h3>
+
+              <div class="space-y-2.5 text-slate-600 text-sm sm:text-base mb-6">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-location-dot text-amber-500 mt-1 w-4 text-center shrink-0"></i>
+                  <span>г. Туркестан, проспект Бекзата Саттарханова, 24 (1 этаж, напротив МКТУ)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-simba-blue w-4 text-center shrink-0"></i>
+                  <span class="font-bold text-simba-navy">+7 (771) 351-13-64</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- СТРОГО ДВЕ КНОПКИ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 border-t border-slate-100">
+              <a href="https://2gis.kz/turkestan/firm/70000001066967929"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl border-2 border-[#19AA1E] text-[#158819] hover:bg-[#19AA1E] hover:text-white font-bold text-sm transition-all duration-200">
+                <i class="fa-solid fa-map-location-dot text-base"></i>
+                <span>Открыть в 2ГИС</span>
+              </a>
+
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Пишу%20по%20поводу%20обучения%20в%20филиале%20на%20Б.%20Саттарханова,%2024"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1fb858] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Написать в WhatsApp</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ФИЛИАЛ 2: Филиал Жаңа Қала (11-я улица) -->
+          <article data-city="turkestan" class="branch-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl border border-slate-200/90 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-simba-blue bg-blue-50 px-3 py-1 rounded-lg border border-blue-100">
+                  <i class="fa-solid fa-city text-amber-500"></i> г. Туркестан
+                </span>
+                <!-- Бейдж с рейтингом 2ГИС -->
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-bold text-xs sm:text-sm shadow-sm">
+                  <span class="text-amber-500">★</span> 5.0 (670+ оценок) <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded">2ГИС</span>
+                </span>
+              </div>
+
+              <h3 class="font-display font-extrabold text-xl sm:text-2xl text-simba-navy mb-3">
+                Филиал Жаңа Қала (11-я улица)
+              </h3>
+
+              <div class="space-y-2.5 text-slate-600 text-sm sm:text-base mb-6">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-location-dot text-amber-500 mt-1 w-4 text-center shrink-0"></i>
+                  <span>г. Туркестан, 11-я улица, 31</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-simba-blue w-4 text-center shrink-0"></i>
+                  <span class="font-bold text-simba-navy">+7 (771) 351-13-64</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- СТРОГО ДВЕ КНОПКИ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 border-t border-slate-100">
+              <a href="https://2gis.kz/turkestan/firm/70000001085301956"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl border-2 border-[#19AA1E] text-[#158819] hover:bg-[#19AA1E] hover:text-white font-bold text-sm transition-all duration-200">
+                <i class="fa-solid fa-map-location-dot text-base"></i>
+                <span>Открыть в 2ГИС</span>
+              </a>
+
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Пишу%20по%20поводу%20обучения%20в%20филиале%20на%2011-й%20улице,%2031"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1fb858] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Написать в WhatsApp</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ФИЛИАЛ 3: Филиал Тауке хана -->
+          <article data-city="turkestan" class="branch-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl border border-slate-200/90 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-simba-blue bg-blue-50 px-3 py-1 rounded-lg border border-blue-100">
+                  <i class="fa-solid fa-landmark text-amber-500"></i> г. Туркестан
+                </span>
+                <!-- Бейдж с рейтингом 2ГИС -->
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-bold text-xs sm:text-sm shadow-sm">
+                  <span class="text-amber-500">★</span> 5.0 (200+ оценок) <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded">2ГИС</span>
+                </span>
+              </div>
+
+              <h3 class="font-display font-extrabold text-xl sm:text-2xl text-simba-navy mb-3">
+                Филиал Тауке хана
+              </h3>
+
+              <div class="space-y-2.5 text-slate-600 text-sm sm:text-base mb-6">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-location-dot text-amber-500 mt-1 w-4 text-center shrink-0"></i>
+                  <span>г. Туркестан, проспект Тауке хана, 303а (2 этаж)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-simba-blue w-4 text-center shrink-0"></i>
+                  <span class="font-bold text-simba-navy">+7 (771) 351-13-64</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- СТРОГО ДВЕ КНОПКИ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 border-t border-slate-100">
+              <a href="https://2gis.kz/turkestan/firm/70000001105022309"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl border-2 border-[#19AA1E] text-[#158819] hover:bg-[#19AA1E] hover:text-white font-bold text-sm transition-all duration-200">
+                <i class="fa-solid fa-map-location-dot text-base"></i>
+                <span>Открыть в 2ГИС</span>
+              </a>
+
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Пишу%20по%20поводу%20обучения%20в%20филиале%20на%20Тауке%20хана,%20303а"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1fb858] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Написать в WhatsApp</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ФИЛИАЛ 4: Филиал Кентау -->
+          <article data-city="kentau" class="branch-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl border border-slate-200/90 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-lg border border-amber-200">
+                  <i class="fa-solid fa-compass text-amber-600"></i> г. Кентау
+                </span>
+                <!-- Бейдж с рейтингом 2ГИС -->
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-bold text-xs sm:text-sm shadow-sm">
+                  <span class="text-amber-500">★</span> 4.9 <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded">2ГИС</span>
+                </span>
+              </div>
+
+              <h3 class="font-display font-extrabold text-xl sm:text-2xl text-simba-navy mb-3">
+                Филиал Кентау
+              </h3>
+
+              <div class="space-y-2.5 text-slate-600 text-sm sm:text-base mb-6">
+                <div class="flex items-start gap-3">
+                  <i class="fa-solid fa-location-dot text-amber-500 mt-1 w-4 text-center shrink-0"></i>
+                  <span>г. Кентау (р-н ост. Жамал Омарова)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-simba-blue w-4 text-center shrink-0"></i>
+                  <span class="font-bold text-simba-navy">+7 (771) 351-13-64</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- СТРОГО ДВЕ КНОПКИ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 border-t border-slate-100">
+              <a href="https://2gis.kz/turkestan/firm/70000001117732301"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl border-2 border-[#19AA1E] text-[#158819] hover:bg-[#19AA1E] hover:text-white font-bold text-sm transition-all duration-200">
+                <i class="fa-solid fa-map-location-dot text-base"></i>
+                <span>Открыть в 2ГИС</span>
+              </a>
+
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Пишу%20по%20поводу%20обучения%20в%20филиале%20г.%20Кентау"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1fb858] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Написать в WhatsApp</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. БЛОК ПРЕИМУЩЕСТВ / ПОЧЕМУ ВЫБИРАЮТ НАС -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-simba-blue font-bold text-xs uppercase tracking-wider mb-3">
+            О школе Simba's School
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-simba-navy tracking-tight mb-4">
+            Почему выбирают нас
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg">
+            Мы создали образовательную среду, где дисциплина и системный контроль сочетаются с поддержкой каждого ученика.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Преимущество 1 -->
+          <div class="bg-slate-50 rounded-2xl p-7 sm:p-8 border border-slate-200/80 shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl shadow-md mb-6">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-simba-navy mb-3">
+              Сильные и поддерживающие преподаватели (тичеры)
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Наши тичеры обладают подтвержденной квалификацией и высокими баллами IELTS. Они объясняют сложные темы доступно, мотивируют и помогают поверить в свои силы.
+            </p>
+          </div>
+
+          <!-- Преимущество 2 -->
+          <div class="bg-slate-50 rounded-2xl p-7 sm:p-8 border border-slate-200/80 shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-simba-blue text-amber-400 flex items-center justify-center text-2xl shadow-md mb-6">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-simba-navy mb-3">
+              Ежемесячное тестирование прогресса
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Регулярно отслеживаем динамику знаний каждого студента. Проводим срезы, пробные ЕНТ и Mock IELTS, чтобы родители и ученики видели реальный измеримый результат.
+            </p>
+          </div>
+
+          <!-- Преимущество 3 -->
+          <div class="bg-slate-50 rounded-2xl p-7 sm:p-8 border border-slate-200/80 shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center text-2xl shadow-md mb-6">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-simba-navy mb-3">
+              Интерактивный формат и уютная атмосфера
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Современные светлые аудитории, работа в командах, Speaking-практика и уважительная атмосфера, в которую хочется возвращаться на каждое занятие.
+            </p>
+          </div>
+        </div>
+
+        <!-- Призыв к действию (Баннер консультации) -->
+        <div class="mt-14 bg-navy-geometric rounded-3xl p-7 sm:p-12 text-white shadow-2xl border border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="max-w-2xl text-center lg:text-left">
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-xs uppercase tracking-wider mb-3">
+              Персональный подбор группы
+            </span>
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl mb-3">
+              Не знаете, какой уровень или филиал вам подойдет?
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base">
+              Оставьте заявку в WhatsApp — мы поможем определить ваш уровень английского, подберем удобное расписание и ответим на все вопросы.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3.5 w-full lg:w-auto shrink-0">
+            <a href="https://wa.me/77713511364?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20обучению%20в%20Simba's%20School"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1fb858] text-white font-bold text-base px-7 py-4 rounded-2xl shadow-lg transition-all">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Бесплатная консультация</span>
+            </a>
+            <a href="#branches"
+               class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-base px-6 py-4 rounded-2xl border border-white/15 transition-all">
+              <span>Выбрать филиал</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. ПОДВАЛ САЙТА (FOOTER) -->
+  <footer id="contacts" class="bg-simba-navy text-slate-300 pt-14 pb-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Колонка 1: О бренде -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white shadow">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+            <span class="font-display font-extrabold text-2xl text-white">
+              Simba's <span class="text-amber-400">School</span>
+            </span>
+          </div>
+          <p class="text-slate-400 text-sm sm:text-base max-w-md mb-6 leading-relaxed">
+            Современная школа английского языка в г. Туркестан и г. Кентау. Подготовка к IELTS, ЕНТ, курсы General English, Simba KIDS и Speaking Club.
+          </p>
+          <a href="https://2gis.kz/turkestan/branches/70000001066967928"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#19AA1E]/20 border border-[#19AA1E]/40 text-emerald-300 hover:bg-[#19AA1E] hover:text-white font-bold text-sm transition-all">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Все филиалы Simba's School в 2ГИС</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div>
+          <h4 class="font-display font-bold text-white text-base uppercase tracking-wider mb-4">
+            Навигация
+          </h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">О школе</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">Направления обучения</a></li>
+            <li><a href="#branches" class="hover:text-amber-400 transition-colors">Наши филиалы (4)</a></li>
+            <li>
+              <a href="https://2gis.kz/turkestan/branches/70000001066967928" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">
+                Отзывы в 2ГИС (★ 5.0)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 3: Контакты -->
+        <div>
+          <h4 class="font-display font-bold text-white text-base uppercase tracking-wider mb-4">
+            Контакты
+          </h4>
+          <ul class="space-y-3.5 text-sm">
+            <li>
+              <div class="text-xs text-slate-400 mb-0.5">Единый телефон:</div>
+              <a href="tel:+77713511364" class="font-bold text-white hover:text-amber-400 text-base transition-colors inline-flex items-center gap-2">
+                <i class="fa-solid fa-phone text-amber-400"></i>
+                <span>+7 (771) 351-13-64</span>
+              </a>
+            </li>
+            <li>
+              <div class="text-xs text-slate-400 mb-0.5">Электронная почта:</div>
+              <a href="mailto:simbaschool.kz@gmail.com" class="font-medium text-white hover:text-amber-400 transition-colors inline-flex items-center gap-2 break-all">
+                <i class="fa-solid fa-envelope text-amber-400"></i>
+                <span>simbaschool.kz@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <div class="text-xs text-slate-400 mb-0.5">WhatsApp-консультация:</div>
+              <a href="https://wa.me/77713511364?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20обучению%20в%20Simba's%20School"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="font-semibold text-[#25D366] hover:underline inline-flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Написать в WhatsApp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Копирайт -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© <span id="current-year">2026</span> Simba's School. Все права защищены. г. Туркестан и г. Кентау.</p>
+        <p class="flex items-center gap-2">
+          <i class="fa-solid fa-star text-amber-400"></i>
+          <span>Средний рейтинг 5.0 в 2ГИС на основе 1370+ оценок</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка быстрой связи в WhatsApp для мобильных и ПК -->
+  <a href="https://wa.me/77713511364?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20обучению%20в%20Simba's%20School"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Бесплатная консультация в WhatsApp"
+     class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1fb858] text-white font-bold px-4 py-3.5 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline text-sm pr-1">Консультация</span>
+  </a>
+
+  <!-- Vanilla JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Мобильное меню
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('mobile-menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (menuBtn && mobileMenu && menuIcon) {
+        menuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(isHidden));
+          menuIcon.className = isHidden ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-lg';
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuIcon.className = 'fa-solid fa-bars text-lg';
+          });
+        });
+      }
+
+      // 2. Фильтрация филиалов по городам (Все / Туркестан / Кентау)
+      const cityTabs = document.querySelectorAll('.city-tab');
+      const branchCards = document.querySelectorAll('.branch-card');
+
+      cityTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.getAttribute('data-city-filter');
+
+          cityTabs.forEach((t) => {
+            t.classList.remove('bg-simba-navy', 'text-white');
+            t.classList.add('text-slate-600');
+          });
+          tab.classList.add('bg-simba-navy', 'text-white');
+          tab.classList.remove('text-slate-600');
+
+          branchCards.forEach((card) => {
+            const cardCity = card.getAttribute('data-city');
+            if (filter === 'all' || cardCity === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // 3. Актуальный год в футере
+      const yearSpan = document.getElementById('current-year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
